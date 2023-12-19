@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hannkang <hannkang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 23:42:33 by hannkang          #+#    #+#             */
-/*   Updated: 2023/12/12 02:10:04 by hannkang         ###   ########.fr       */
+/*   Created: 2023/12/12 01:16:03 by hannkang          #+#    #+#             */
+/*   Updated: 2023/12/12 15:16:02 by hannkang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,12 @@ void	ft_printf_hex(unsigned int n, unsigned int *count, char x_or_x)
 	i = 0;
 	while (n)
 	{
-		buffer[i] = base[n % 16];
+		buffer[i] = base[n % 16]; 
 		n /= 16;
 		i++;
 	}
-	while (i)
+	while (i--)
 	{
-		i--;
 		ft_printf_char(buffer[i], count);
 	}
 }
